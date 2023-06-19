@@ -1,4 +1,4 @@
-package com.homebroker.trade.tradeservice;
+package com.homebroker.trade;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -2,24 +2,37 @@ package com.homebroker.trade.domain.entities;
 
 import java.util.List;
 
-public class WalletId {
+public class Wallet {
     private int walletId;
     private int quantity;
-    private int balance;
-
+    private double balance;
     private List<Transaction> transactions;
 
-    public WalletId(int walletId) {
+    public Wallet(int walletId, int quantity, double balance) {
         this.walletId = walletId;
+        this.quantity = quantity;
+        this.balance = balance;
     }
 
-    void BuyOperation(int quantity, int value){
+    public void BuyOperation(int quantity, double value){
         quantity +=quantity;
         balance -= value;
     }
 
-    void SellOperation(int quantity, int value){
+    public void SellOperation(int quantity, double value){
         quantity -= quantity;
         balance += value;
+    }
+
+    public int getWalletId() {
+        return walletId;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 }
